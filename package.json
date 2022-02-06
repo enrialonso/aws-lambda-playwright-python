@@ -1,5 +1,5 @@
 {
-  "name": "aws-lambda-playwright",
+  "name": "aws-lambda-playwright-python",
   "version": "1.0.0",
   "description": "This a minimal example how to use a playwright library to use on AWS Lambda with python",
   "author": "Enrique Alonso a.k.a enrialonso on github",

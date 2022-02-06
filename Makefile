@@ -1,5 +1,8 @@
 .SHELL=bash
 
+install:
+	npm install
+
 build:
 	docker build -t aws-lambda-playwright .
 
