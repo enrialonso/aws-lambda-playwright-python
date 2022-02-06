@@ -1,0 +1,25 @@
+service: aws-lambda-playwright
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: "${env:AWS_REGION}"
+  stage: "${env:STAGE}"
+  versionFunctions: false
+
+  ecr:
+    scanOnPush: false
+    images:
+      playwright-docker-image:
+        path: "./"
+        file: "Dockerfile"
+
+functions:
+  PlaywrightDockerPython:
+    name: ${sls:stage}-playwright-docker-python
+    image: playwright-docker-image
+    runtime: python3.8
+    memorySize: 1024
+    timeout: 30

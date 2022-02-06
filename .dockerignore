@@ -1,0 +1,11 @@
+.venv
+node_modules
+env
+scripts/manager.sh
+Dockerfile
+Makefile
+package.json
+package-lock.json
+pyproject.toml
+README.md
+serverless.yml
