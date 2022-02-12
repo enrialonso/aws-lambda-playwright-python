@@ -1,13 +1,14 @@
 .SHELL=bash
+IMAGE_NAME=aws-lambda-playwright-python
 
 install:
 	npm install
 
 build:
-	docker build -t aws-lambda-playwright .
+	docker build -t $(IMAGE_NAME) .
 
 run-local:
-	docker run -it aws-lambda-playwright
+	docker run -it $(IMAGE_NAME)
 
 deploy:
 	bash $(shell pwd)/scripts/manager.sh $(stage) deploy

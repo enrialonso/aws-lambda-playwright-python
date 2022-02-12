@@ -12,14 +12,14 @@ provider:
   ecr:
     scanOnPush: false
     images:
-      playwright-docker-image:
+      playwright-docker-python-image:
         path: "./"
         file: "Dockerfile"
 
 functions:
   PlaywrightDockerPython:
     name: ${sls:stage}-playwright-docker-python
-    image: playwright-docker-image
+    image: playwright-docker-python-image
     runtime: python3.8
     memorySize: 1024
     timeout: 30

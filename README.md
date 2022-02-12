@@ -7,9 +7,9 @@ ____________________
 - [New for AWS Lambda – Container Image Support](https://aws.amazon.com/es/blogs/aws/new-for-aws-lambda-container-image-support/)
 - [Running End-to-End Tests with Playwright on AWS Lambda](https://www.larihaataja.com/running-e2e-tests-playwright-aws-lambda#write-comment)
 
-### ❓ Why
+### Why ❓
 
-Its easy play with playwright and I am filling more confortable instead do use selenium, sometimes times needs to deploy a solution 
+Its easy play with playwright and I am feeling more confortable instead do use selenium, sometimes times needs to deploy a solution 
 completely serverless and here can do that with AWS Lambda and playwright. I searched on the web this solution but not
 have too much lucky with python approach (don't look too hard).
 
@@ -45,7 +45,7 @@ to extract its title and print it to the logs.
 make install
 ```
 
-All the code osf the app is inside of `app` folder feel free to try your code.
+All the app code is inside of `app` folder, feel free to try your code and test.
 
 >**Note:** always the handler is the main function on `app/main.py`
 
@@ -64,7 +64,29 @@ make deploy stage=dev
 This command deploy the serverless solution and create
 
 - **Cloudformation** stack with all resources.
-- **S3** bucket with all the code or artifacts of the project (I think is not used but is deployed by default for serverless)
-- **ECR** repository to upload the image for the lambda
-- **Lambda function** to run the docker image.
+- **S3** bucket with all the code or artifacts of the project.
+- **ECR** repository to upload the docker image for the lambda.
+- **Lambda** function.
 
+### Test the lambda
+
+```bash
+make deploy stage=dev
+```
+
+#### Output
+
+```bash
+$ ❯ make invoke stage=dev                                                                                                                                                                                                  4s  aws-lambda-playwright  18:07:22
+Running "serverless" from node_modules
+null
+--------------------------------------------------------------------
+START
+Start
+Launch browser with args: ['--disable-dev-shm-usage', '--ipc=host', '--single-process']
+Open new page
+Go to url: https://playwright.dev
+Page title: Fast and reliable end-to-end testing for modern web apps | Playwright
+End
+END Duration: 3290.65 ms        Billed Duration: 3291 ms        Memory Size: 1024 MB    Max Memory Used: 203 MB
+```
