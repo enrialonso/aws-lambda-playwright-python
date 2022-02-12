@@ -74,7 +74,7 @@ This command deploy the serverless solution and create
 make deploy stage=dev
 ```
 
-#### Output
+#### 🍔 Output
 
 ```bash
 $ ❯ make invoke stage=dev                                                                                                                                                                                                  4s  aws-lambda-playwright  18:07:22
