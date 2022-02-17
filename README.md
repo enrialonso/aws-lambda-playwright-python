@@ -9,13 +9,14 @@ ____________________
 
 ### Why ❓
 
-Its easy play with playwright and I am feeling more confortable instead do use selenium, sometimes times needs to deploy a solution 
-completely serverless and here can do that with AWS Lambda and playwright. I searched on the web this solution but not
-have too much lucky with python approach (don't look too hard).
+It's easy to play with a Playwright, and I'm feeling more comfortable instead of using Selenium. Sometimes times need to
+deploy a solution completely serverless and here can do that with AWS Lambda and playwright. I searched on the web for 
+this solution but did not have luck with the python approach (don't look too hard).
 
 ### ⚽ Our goal
-We want to build an AWS lambda based on docker images, this lambda will open a browser in headless mode and visit a website 
-to extract its title and print it to the logs.
+
+We want to build an AWS lambda based on docker images, this lambda will open a browser in headless mode and visit a 
+website to extract it’s title and put in logs.
 
 #### Dependencies
 
@@ -28,7 +29,7 @@ to extract its title and print it to the logs.
 - aws-cli (for config de AWS profile)
 
 
-### 🔤 Prerequisites
+### 🔤 Requirements configurations
 
 - Config your AWS profile and credentials, `aws configure` in the terminal.
 - Set your env file before notting, Example
